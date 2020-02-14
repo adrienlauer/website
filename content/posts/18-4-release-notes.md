@@ -19,7 +19,7 @@ We are happy to announce the release of SeedStack 18.4 «Orchid».<!--more-->
 ### Better samples
 
 We have consolidated all samples in a single project for simplicity. Some new samples have been added too. 
-Check it out [on the samples page]({{< ref "docs/samples/index.md" >}}). 
+Check it out [on the samples page]({{< ref "learn/samples" >}}). 
 
 ### Java 9 compatibility
 
@@ -53,7 +53,7 @@ More information on Web integration testing [here]({{< ref "docs/web/testing.md"
 
 ### OAuth add-on
 
-A [new OAuth add-on]({{< ref "addons/oauth/index.md" >}}) provides support for the OAuth 2.0 and OpenID Connect protocols. This enables applications
+A [new OAuth add-on]({{< ref "addons/oauth" >}}) provides support for the OAuth 2.0 and OpenID Connect protocols. This enables applications
 to authenticate and authorize users using any compliant provider. Authorization-only (without authentication) is possible
 if your provider doesn't support OpenID Connect.  
 
@@ -101,7 +101,7 @@ annotations. In most cases you won't need to modify test implementations. See th
 
 ### W20 bridge
 
-The [W20-bridge add-on]({{< ref "addons/w20-bridge/index.md" >}}) is now based on the most recent version of the W20 framework which 
+The [W20-bridge add-on]({{< ref "addons/w20-bridge" >}}) is now based on the most recent version of the W20 framework which 
 has switched from Bower to NPM for package management. 
 
 As a result, Web packages are now located under a `node_modules` location instead of a `bower_components` one. Some 

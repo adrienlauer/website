@@ -530,7 +530,7 @@ must be parsed manually.
 ## Tooling
 
 {{% callout info %}}
-For more information about the tool mode, see [this page]({{< ref "docs/core/index.md#tool-mode" >}}).
+For more information about the tool mode, see [this page]({{< ref "docs/core#tool-mode" >}}).
 {{% /callout %}}
 
 ### Configuration options dump

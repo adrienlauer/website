@@ -42,7 +42,7 @@ framework, see [below]({{< ref "docs/business/factories.md#identity-generation" 
 ## Default factory
 
 The business framework provides a default factory for each class implementing {{< java "org.seedstack.business.Producible" >}}
-that does not already has a [custom factory](#custom-factory). To use a default factory, [inject]({{< ref "docs/basics/dependency-injection.md" >}})
+that does not already has a [custom factory](#custom-factory). To use a default factory, [inject]({{< ref "learn/getting-started/dependency-injection.md" >}})
 the {{< java "org.seedstack.business.domain.Factory" >}} interface, with the type to create as generic parameter: 
 
 ```java
@@ -95,7 +95,7 @@ otherwise move the implementation in the infrastructure package.
 
 ### Usage
 
-To use your custom factory, [inject]({{< ref "docs/basics/dependency-injection.md" >}}) the custom interface: 
+To use your custom factory, [inject]({{< ref "learn/getting-started/dependency-injection.md" >}}) the custom interface: 
 
 ```java
 public class SomeClass {

@@ -77,7 +77,7 @@ both be present.
 
 {{% callout warning %}}
 Transactions are implemented using method interception. Beware of SeedStack 
-[method interception limitations]({{< ref "docs/basics/dependency-injection.md#method-interception" >}}) when using 
+[method interception limitations]({{< ref "learn/getting-started/dependency-injection.md#method-interception" >}}) when using 
 transactions.  
 {{% /callout %}} 
 

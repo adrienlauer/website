@@ -14,7 +14,7 @@ menu:
         weight: 50
 ---
 
-The `tool` goal will execute the application in [tool mode]({{< relref "docs/core/index.md#tool-mode" >}}) instead of its normal mode. <!--more-->
+The `tool` goal will execute the application in [tool mode]({{< relref "docs/core#tool-mode" >}}) instead of its normal mode. <!--more-->
 It will execute the tool specified as the first argument in the `args` parameter. Further arguments and options depend
 upon each tool.
 

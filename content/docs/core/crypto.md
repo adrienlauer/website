@@ -200,7 +200,7 @@ You must have a `master` key store already configured in your application.
 ## SSL
 
 The SSL configuration required for HTTPS operation of embedded Web servers such as the 
-[built-in Undertow]({{< ref "docs/web/index.md#with-undertow" >}}) can be found below: 
+[built-in Undertow]({{< ref "docs/web#with-undertow" >}}) can be found below: 
 
 {{% config p="crypto.ssl" %}}
 ```yaml

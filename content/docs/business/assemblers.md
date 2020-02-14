@@ -136,7 +136,7 @@ The `defaultAssembler` property expects a qualifier annotation class name (like 
 
 ### Usage
 
-To use your assembler directly, [inject]({{< ref "docs/basics/dependency-injection.md" >}}) the 
+To use your assembler directly, [inject]({{< ref "learn/getting-started/dependency-injection.md" >}}) the 
 {{< java "org.seedstack.business.assembler.Assembler" >}} interface: 
 
 ```java

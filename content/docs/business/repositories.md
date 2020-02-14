@@ -53,7 +53,7 @@ or a [custom](#custom-repository) repository. The {{< java "org.seedstack.busine
 
 ### Usage
 
-To use a default repository, [inject]({{< ref "docs/basics/dependency-injection.md" >}}) the {{< java "org.seedstack.business.domain.Repository" >}} 
+To use a default repository, [inject]({{< ref "learn/getting-started/dependency-injection.md" >}}) the {{< java "org.seedstack.business.domain.Repository" >}} 
 interface with the aggregate and its identifier types as generic parameters. Qualify the injection point to select an 
 implementation. Example:
 
@@ -105,7 +105,7 @@ execute it.
 
 ### Usage
 
-To use the generated repository, [inject]({{< ref "docs/basics/dependency-injection.md" >}}) the custom interface. Qualify 
+To use the generated repository, [inject]({{< ref "learn/getting-started/dependency-injection.md" >}}) the custom interface. Qualify 
 the injection point to select an implementation.
 
 ```java
@@ -164,7 +164,7 @@ available in some [persistence add-ons]({{< baseUrl >}}addons?f=persistence).
 
 ### Usage
 
-To use the explicit repository, [inject]({{< ref "docs/basics/dependency-injection.md" >}}) the custom interface: 
+To use the explicit repository, [inject]({{< ref "learn/getting-started/dependency-injection.md" >}}) the custom interface: 
 
 ```java
 public class SomeClass {

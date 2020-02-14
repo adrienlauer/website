@@ -74,7 +74,7 @@ If you have more than one implementation of a service, you must differentiate th
 
 ## Usage
 
-To use your service, [inject]({{< ref "docs/basics/dependency-injection.md" >}}) its interface: 
+To use your service, [inject]({{< ref "learn/getting-started/dependency-injection.md" >}}) its interface: 
 
 ```java
 public class SomeClass {

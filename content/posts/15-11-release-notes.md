@@ -215,13 +215,13 @@ transactions. More information about this feature [here]({{< ref "addons/spring-
 
 Three new add-ons are now provided to use popular NoSQL databases:
 
-* [MongoDB add-on]({{< ref "addons/mongodb/index.md" >}}),
-* [Redis add-on]({{< ref "addons/redis/index.md" >}}),
-* [Neo4J add-on]({{< ref "addons/neo4j/index.md" >}}),
+* [MongoDB add-on]({{< ref "addons/mongodb" >}}),
+* [Redis add-on]({{< ref "addons/redis" >}}),
+* [Neo4J add-on]({{< ref "addons/neo4j" >}}),
 
 ### Solr add-on
 
-A [Solr add-on]({{< ref "addons/solr/index.md" >}}) is now provided to access Solr indexing servers.
+A [Solr add-on]({{< ref "addons/solr" >}}) is now provided to access Solr indexing servers.
 
 ## Component versions
 

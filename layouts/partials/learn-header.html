@@ -1,0 +1,41 @@
+<div class="title-header small">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-9 col-sm-12">
+                <h1>Learn</h1>
+                <p class="hidden-xs">Tutorial, samples and hands-on guides. Discover what SeedStack can do for you !</p>
+            </div>
+            <div class="col-md-3 hidden-sm hidden-xs">
+                <div class="header-image-wrapper">
+                    <img class="header-image" src="{{ $.Site.BaseURL }}img/logos/getting-started-logo.svg">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="title-subheader">
+    <div class="container">
+        <ul>
+            <li>
+                <span class='{{ if eq .Params.subsection "getting-started" }}active{{ end }}'>
+                    <i class="fa fa-home"></i> <a href="{{ $.Site.BaseURL }}learn/getting-started">Getting started</a>
+                </span>
+            </li>
+            <li>
+                <span class='{{ if eq (.Scratch.Get "section") "Manual" }}active{{ end }}'>
+                    <i class="fa fa-dot-circle-o"></i> <a href="{{ $.Site.BaseURL }}docs">Core</a>
+                </span>
+            </li>
+            <li>
+                <span class='{{ if eq (.Scratch.Get "section") "Business" }}active{{ end }}'>
+                    <i class="fa fa-briefcase"></i> <a href="{{ $.Site.BaseURL }}docs/business">Business</a>
+                </span>
+            </li>
+            {{ if not .Params.NoMenu }}
+            <li class="pull-right">
+                {{ partial "menu-toggle.html" }}
+            </li>
+            {{ end }}
+        </ul>
+    </div>
+</div>

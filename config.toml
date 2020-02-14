@@ -71,6 +71,26 @@ MetaDataFormat = "yaml"
 #####################################
 #### Menu                        ####
 #####################################
+
+[[menu.learn-getting-started]]
+    name = "The basics"
+    identifier = "basics"
+    weight = -100
+
+[[menu.learn-getting-started]]
+    name = "REST APIs"
+    identifier = "rest"
+    weight = -90
+
+[[menu.learn-getting-started]]
+    name = "Business code"
+    identifier = "business"
+    weight = -80
+
+
+
+
+
 [[menu.project]]
     name = "Project info"
     identifier = "project"

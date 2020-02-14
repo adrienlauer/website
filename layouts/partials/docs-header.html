@@ -9,7 +9,7 @@
             <div class="col-md-9 col-sm-12">
                 <h1>Documentation</h1>
                 <p class="hidden-xs">
-                    Learn everything about SeedStack.
+                    Reference manual for SeedStack base features.
             </div>
             <div class="col-md-3 hidden-sm hidden-xs">
                 <div class="header-image-wrapper">
@@ -22,6 +22,11 @@
 <div class="title-subheader">
     <div class="container">
         <ul>
+            <li>
+                <span class='{{ if eq (.Scratch.Get "section") "Home" }}active{{ end }}'>
+                    <i class="fa fa-home"></i> <a href="{{ $.Site.BaseURL }}docs">Home</a>
+                </span>
+            </li>
             <li>
                 <span class='{{ if eq (.Scratch.Get "section") "Manual" }}active{{ end }}'>
                     <i class="fa fa-dot-circle-o"></i> <a href="{{ $.Site.BaseURL }}docs">Core</a>

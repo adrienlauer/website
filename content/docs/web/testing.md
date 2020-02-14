@@ -50,7 +50,7 @@ a 200 HTTP code when invoked with GET.
 
 {{% callout info %}}
 Note that we retrieve the dynamic base URL of the launched server using the special configuration property `runtime.web.baseUrl`.
-More information about this [here]({{< ref "docs/web/index.md#server-information" >}}).
+More information about this [here]({{< ref "docs/web#server-information" >}}).
 {{% /callout %}}
 
 {{% callout tips %}}

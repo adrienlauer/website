@@ -42,7 +42,7 @@ public class SomeClass {
 ```
 
 {{% callout info %}}
-Specification translation is currently only implemented in [JPA]({{< ref "addons/jpa/index.md" >}}) and 
+Specification translation is currently only implemented in [JPA]({{< ref "addons/jpa" >}}) and 
 [MongoDB Morphia]({{< ref "addons/mongodb/morphia.md" >}}) add-ons.
 {{% /callout %}}
 

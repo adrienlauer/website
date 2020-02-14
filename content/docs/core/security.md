@@ -193,7 +193,7 @@ It also uses the CN of the issuer of the certificates to define the basic roles 
 
 #### LDAP realm
 
-This realm is available in the [LDAP add-on]({{< ref "addons/ldap/index.md" >}}).
+This realm is available in the [LDAP add-on]({{< ref "addons/ldap" >}}).
 
 #### Custom realm
 
@@ -352,7 +352,7 @@ public class SomeClass {
 
 {{% callout danger %}}
 Note that these annotation-based security checks are implemented with **method interception** and are subject to 
-**[its limitations]({{< ref "docs/basics/dependency-injection.md#method-interception" >}})**.
+**[its limitations]({{< ref "learn/getting-started/dependency-injection.md#method-interception" >}})**.
 {{% /callout %}}
 
 ### Programmatic checks

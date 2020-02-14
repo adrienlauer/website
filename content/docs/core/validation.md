@@ -73,7 +73,7 @@ A {{< java "javax.validation.ConstraintViolationException" >}} will be thrown on
 is violated. 
 
 {{% callout warning %}}
-Beware of SeedStack [method interception limitations]({{< ref "docs/basics/dependency-injection.md#method-interception" >}}) 
+Beware of SeedStack [method interception limitations]({{< ref "learn/getting-started/dependency-injection.md#method-interception" >}}) 
 when using parameters and return values constraints.  
 {{% /callout %}} 
 
@@ -155,7 +155,7 @@ public class CheckCaseValidator implements ConstraintValidator<CheckCase, String
 ```
 
 {{% callout tips %}}
-Validator implementations can be [injected]({{< ref "docs/basics/dependency-injection.md" >}}) to allow for 
+Validator implementations can be [injected]({{< ref "learn/getting-started/dependency-injection.md" >}}) to allow for 
 sophisticated validation behavior. 
 
 For instance, you can access persistence, use business services or even check security conditions in a custom validator. 

@@ -24,7 +24,7 @@ You can now trigger a diagnostic manually by using the Maven `diag` goal:
 mvn seedstack:diag
 ```
 
-Or directly by [running the packaged application capsule]({{< ref "docs/core/index.md#capsule" >}}):
+Or directly by [running the packaged application capsule]({{< ref "docs/core#capsule" >}}):
  
 ```bash
 java -Dseedstack.tool=diag -jar app-capsule.jar

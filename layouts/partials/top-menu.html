@@ -1,5 +1,5 @@
-{{ if (isset .Params.zones 0) }}
-    {{ .Scratch.Set "zone" (index .Params.zones 0) }}
+{{ if eq .Kind "section" }}
+    {{ .Scratch.Set "zone" .Section }}
 {{ else }}
     {{ .Scratch.Set "zone" .Title }}
 {{ end }}
@@ -14,14 +14,17 @@
     <div class="collapse navbar-collapse navbar-responsive-collapse" data-role="navigation" style="pointer-events: none;">
         <div class="container">
             <ul class="nav navbar-nav" style="pointer-events: auto;">
-                <li class='{{ if eq (.Scratch.Get "zone") "Docs" }}active{{ end }}'>
-                    <a href="{{ $.Site.BaseURL }}docs">Documentation</a>
+                <li class='{{ if eq (.Scratch.Get "zone") "learn" }}active{{ end }}'>
+                    <a href="{{ $.Site.BaseURL }}learn">Learn</a>
                 </li>
-                <li class='{{ if eq (.Scratch.Get "zone") "Guides" }}active{{ end }}'>
-                    <a href="{{ $.Site.BaseURL }}guides">Guides</a>
+                <li class='{{ if eq (.Scratch.Get "zone") "docs" }}active{{ end }}'>
+                    <a href="{{ $.Site.BaseURL }}docs">Docs</a>
                 </li>
-                <li class='{{ if eq (.Scratch.Get "zone") "Addons" }}active{{ end }}'>
+                <li class='{{ if eq (.Scratch.Get "zone") "addons" }}active{{ end }}'>
                     <a href="{{ $.Site.BaseURL }}addons">Add-ons</a>
+                </li>
+                <li class='{{ if eq (.Scratch.Get "zone") "support" }}active{{ end }}'>
+                    <a href="{{ $.Site.BaseURL }}support">Support</a>
                 </li>
                 <li class='{{ if eq (.Scratch.Get "zone") "Posts" }}active{{ end }}'>
                     <a href="{{ $.Site.BaseURL }}posts">News</a>

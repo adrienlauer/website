@@ -45,7 +45,7 @@ Technical dependencies are injected through these interfaces:
 more flexible by allowing different implementations of an interface to be injected.
 
 {{% callout info %}}
-In SeedStack, the Dependency Inversion Principle is implemented by [dependency injection]({{< ref "docs/basics/dependency-injection.md" >}}).
+In SeedStack, the Dependency Inversion Principle is implemented by [dependency injection]({{< ref "learn/getting-started/dependency-injection.md" >}}).
 {{% /callout %}}
 
 ## Layers

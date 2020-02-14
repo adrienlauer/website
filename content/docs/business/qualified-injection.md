@@ -15,7 +15,7 @@ menu:
         weight: 7
 ---
 
-In the business framework, you always [inject]({{< ref "docs/basics/dependency-injection.md" >}}) dependencies by interface
+In the business framework, you always [inject]({{< ref "learn/getting-started/dependency-injection.md" >}}) dependencies by interface
 not by implementation class. For each injection point, two situations are possible:
 
 * If only one implementation exists for a specific interface, it is injected without ambiguity.

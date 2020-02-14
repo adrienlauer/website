@@ -26,7 +26,7 @@ The JavaScript W20 framework is no longer a part of SeedStack itself and has bee
 in which it will continue to evolve separately. This change makes of SeedStack, a full Java development solution. This 
 separation greatly simplifies the evolution, the documentation and the "market positioning" of SeedStack and W20.
 
-As before, you can still use the [W20 bridge add-on]({{<ref "addons/w20-bridge/index.md" >}}) to automate the integration
+As before, you can still use the [W20 bridge add-on]({{<ref "addons/w20-bridge" >}}) to automate the integration
 between SeedStack and W20.
 
 {{% callout ref %}}
@@ -69,7 +69,7 @@ the application is initialized with the minimal amount of plugins necessary to e
  
 Tools can be run:
 
-* With the [Maven plugin]({{< ref "docs/maven-plugin/index.md" >}}), either with the `tool` goal which can
+* With the [Maven plugin]({{< ref "docs/maven-plugin" >}}), either with the `tool` goal which can
 run any tool by name or with a specific goal for simplicity.
 * By executing the {{< java "org.seedstack.core.SeedMain" >}} class with the system property `seedstack.tool` set to the 
 name of the tool to execute. 
@@ -94,7 +94,7 @@ A new add-on integrating some Netflix open-source technologies is now provided. 
 REST client.
 
 {{% callout ref %}}
-More information [here]({{< ref "addons/netflix/index.md" >}}).
+More information [here]({{< ref "addons/netflix" >}}).
 {{% /callout %}}
 
 ### Bean validation

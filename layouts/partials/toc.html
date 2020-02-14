@@ -28,7 +28,7 @@
     <br/>
     <div>
         {{ $parent := . }}
-        {{ if in .Dir "addons" }}
+        {{ if in $parent.File.Dir "addons" }}
         {{ if isset $parent.Params "repo" }}
         {{with $parent.File }}<a href='{{ $path := split (replace .Dir "\\" "/") "/" }}{{ $parent.Params.repo }}/edit/docs/{{ range $index, $element := $path }}{{ if and (gt $index 1) (gt (len $element) 0) }}{{ $element }}/{{ end }}{{ end }}{{ html .LogicalName }}' target="_blank"><i class="fa fa-edit"></i> Edit this page</a>{{end}}
         {{ end }}
