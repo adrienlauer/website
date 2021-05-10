@@ -1,10 +1,6 @@
 ---
-title: "Dump effective configuration"
-type: "home"
-zones:
-    - "Docs"
-sections:
-    - "Maven"    
+title: "Effective-config"
+subsection: "maven"
 tags:
     - maven
 aliases: /docs/maven-plugin/manual/effective-config    
@@ -17,10 +13,10 @@ menu:
 The `effective-config` goal produces a YAML dump of the configuration as scanned, parsed and aggregated by SeedStack. <!--more-->
 This will show the global configuration as the application sees it.
 
-{{% callout tips %}}
+{{< callout tips >}}
 This goal executes the [effective-config tool](/docs/seed/configuration/#effective-configuration) on 
 the project. It is a shortcut for the [tool goal](../tool) with `effective-config` specified as first argument. 
-{{% /callout %}}
+{{< /callout >}}
 
 ## Parameters
 

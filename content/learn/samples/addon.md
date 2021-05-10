@@ -1,16 +1,12 @@
 ---
 title: "Add-on samples"
-type: "home"
-zones:
-    - "Docs"
-sections:
-    - "Samples"    
+subsection: "samples"    
 tags:
     - tutorial
 menu:
-    docs-samples:
-        parent: "samples"
-        weight: 30
+    learn-samples:
+        parent: "categories"
+        weight: 40
 ---
 
 ## Web-Services add-on
@@ -22,10 +18,10 @@ This sample demonstrates JAX-WS integration:
 * Certificate secured Web-Service,
 * Client usage of those Web-Services.
  
-{{% callout ref %}}
+{{< callout ref >}}
 GitHub: https://github.com/seedstack/samples/tree/master/addons/web-services
 <br>Relevant docs: [Web-Services add-on]({{< ref "addons/web-services" >}}).
-{{% /callout %}}
+{{< /callout >}}
 
 ## W20 bridge add-on
 
@@ -35,10 +31,10 @@ This sample demonstrates integration of the [W20 framework](//w20-framework.gith
 * Custom W20 configuration handler,
 * Basic W20 UI.
 
-{{% callout ref %}}
+{{< callout ref >}}
 GitHub: https://github.com/seedstack/samples/tree/master/addons/w20-bridge
 <br>Relevant docs: [W20 bridge add-on]({{< ref "addons/w20-bridge" >}}).
-{{% /callout %}}
+{{< /callout >}}
 
 ## Spring bridge
 
@@ -49,10 +45,10 @@ This sample demonstrates the integration of Spring framework with SeedStack:
 * Usage of SeedStack configuration values in Spring contexts,
 * Usage of SeedStack datasources in Spring contexts.
 
-{{% callout ref %}}
+{{< callout ref >}}
 GitHub: https://github.com/seedstack/samples/tree/master/addons/spring-bridge
-<br>Relevant docs: [Spring bridge]({{< ref "addons/spring-bridge" >}}).
-{{% /callout %}}
+<br>Relevant docs: [Spring bridge]({{< ref "addons/spring-bridge/injection" >}}).
+{{< /callout >}}
 
 ## Spring Batch job
 
@@ -60,8 +56,8 @@ This sample demonstrates the integration of Spring framework and Spring batch wi
 
 * Running of Spring batch job with SeedStack.
 
-{{% callout ref %}}
+{{< callout ref >}}
 GitHub: https://github.com/seedstack/samples/tree/master/addons/spring-batch
-<br>Relevant docs: [Spring bridge]({{< ref "addons/spring-bridge" >}}), [Command-line]({{< ref "docs/cli" >}}).
-{{% /callout %}}
+<br>Relevant docs: [Spring bridge]({{< ref "addons/spring-bridge/batch" >}}), [Command-line]({{< ref "docs/core/cli" >}}).
+{{< /callout >}}
 

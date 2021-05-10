@@ -1,13 +1,11 @@
 ---
 title: "What is Domain-Driven Design ?"
-type: "home"
-zones:
-    - "Docs"
-sections:
-    - "Business"    
+subsection: "business"
 tags:
     - essentials
     - domain-driven design
+aliases:
+    - /docs/business
 menu:
     docs-business:
         parent: "basics" 
@@ -22,7 +20,7 @@ helpers to quickly address related needs like model mapping or pagination.
 
 ## What is DDD ?
 
-**Domain-Driven Design (DDD)** is a term coined by Eric Evans in [his book]({{< ref "docs/business/bibliography.md" >}}) 
+**Domain-Driven Design (DDD)** is a term coined by Eric Evans in [his book]({{< ref "bibliography.md" >}}) 
 "Domain-Driven design", published in 2003. It is an approach of software development that:
 
 * Focuses on the _core domain_.
@@ -38,10 +36,10 @@ Domain-Driven Design has two sides, both equally important:
 * **Strategic design**, which address high-level considerations of domain knowledge and its modeling.
 * **Tactical design**, which propose practical patterns to design the required software.
 
-{{% callout info %}}
+{{< callout info >}}
 The business framework, being an implementation framework, naturally focuses on the tactical side of DDD. Nonetheless,
 strategic design should not be overlooked and is a critical aspect of designing sustainable software.
-{{% /callout %}}
+{{< /callout >}}
 
 ## A few definitions
 
@@ -72,6 +70,6 @@ The following diagram represents the key patterns of tactical Domain-Driven Desi
 
 ![Tactical domain-driven design](img/all-domain.png)
 
-{{% callout ref %}}
-Go further by reading source material described in the [bibliography]({{< ref "docs/business/bibliography.md" >}}).
-{{% /callout %}}
+{{< callout ref >}}
+Go further by reading source material described in the [bibliography]({{< ref "bibliography.md" >}}).
+{{< /callout >}}

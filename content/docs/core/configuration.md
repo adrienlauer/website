@@ -1,16 +1,12 @@
 ---
 title: "Configuration"
-type: "home"
-zones:
-    - "Docs"
-sections:
-    - "Manual"    
+subsection: "core"
 tags:
     - configuration
 aliases: /docs/seed/configuration    
 menu:
-    docs-manual:
-        parent: "core"
+    docs-core:
+        parent: "basics"
         weight: 3
 ---
 
@@ -98,13 +94,13 @@ sys:
 As such, to reference the environment variable `file.encoding` a [macro](#macros) can be used: `${sys.file\.encoding}`. System properties 
 have the maximum precedence and cannot be overridden.
   
-{{% callout warning %}}
+{{< callout warning >}}
 Some default system properties (like `java.vendor`) have a value and simultaneously serve as prefix for other keys (like
 `java.vendor.url`). This cannot be mapped as a valid configuration tree, so they are mapped as flat properties under the 
 `sys` node. You must escape the property dots with a backslash (`\`) when specifying the path to such keys. 
 
 In this example, you can access the `file.encoding` property with the `sys.file\.encoding` path.
-{{% /callout %}}
+{{< /callout >}}
          
 ### Priority
          
@@ -296,14 +292,14 @@ fields. The example at the top of the page is mapped like this:
 * The `list` field can be mapped directly.
 * The items of the list can be mapped directly.
 
-{{% callout tips %}}
+{{< callout tips >}}
 The mapping takes into account the full type of the field, **including generics**. As such it is possible to properly
 map complex types like:
  
 * `List<URL>`,
 * `Class<? extends SomeInterface>`,
 * or even `Optional<Map<String, List<SomeEnum>>>`.
-{{% /callout %}}
+{{< /callout >}}
  
 ## Validation
  
@@ -446,10 +442,10 @@ containing:
 org.seedstack.samples.config.GreetFunctionHolder
 ```
 
-{{% callout warning %}}
+{{< callout warning >}}
 The holder is not injectable because it is possible for configuration functions to be called before the injector is ready.
 You must implement your functions in a way that doesn't rely on injection.
-{{% /callout %}}
+{{< /callout >}}
 
 ### Evaluation
 
@@ -475,10 +471,10 @@ Any configuration file can be overridden by adding the "override" word in its na
 * Any node inside a `META-INF/configuration/*.override.yaml` can override any node inside a `META-INF/configuration/*.yaml`
 file.
           
-{{% callout tips %}}
+{{< callout tips >}}
 You can use this feature to override configuration in tests. The easiest way to do this is to add an `application.override.yaml`
 at the root of your test classpath. 
-{{% /callout %}}          
+{{< /callout >}}          
 
 ## Formats
 
@@ -487,9 +483,9 @@ at the root of your test classpath.
 Any configuration file can be in the [YAML format](https://en.wikipedia.org/wiki/YAML). The files can use the `yaml` or 
 the `yml` extension indifferently. 
 
-{{% callout info %}}
+{{< callout info >}}
 This is the preferred configuration format.
-{{% /callout %}}
+{{< /callout >}}
 
 ### JSON 
 
@@ -501,7 +497,7 @@ instead. The same rules apply to YAML and JSON files.
 Any configuration file can also be in [Properties format](https://docs.oracle.com/javase/8/docs/api/java/util/Properties.html),
 by using the `properties` extension instead. 
 
-{{% callout info %}}
+{{< callout info >}}
 Dot-delimited properties are mapped hierarchically. For instance the following properties file:
 
 ```properties
@@ -520,18 +516,18 @@ test:
 **One important side-effect is that you cannot give a value to a property already used as a prefix of another property.**
 In this example, the `test` property cannot be given any value since it cannot be both parent and leaf at the same time
 in the resulting tree.
-{{% /callout %}}
+{{< /callout >}}
 
-{{% callout warning %}}
+{{< callout warning >}}
 Properties files only support string values. Other data types, such as numbers, booleans, arrays or lists are not supported and
 must be parsed manually. 
-{{% /callout %}}
+{{< /callout >}}
 
 ## Tooling
 
-{{% callout info %}}
+{{< callout info >}}
 For more information about the tool mode, see [this page]({{< ref "docs/core#tool-mode" >}}).
-{{% /callout %}}
+{{< /callout >}}
 
 ### Configuration options dump
 

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {{ partial "head.html" . }}
+</head>
+<body>
+{{ partial "initial-scripts.html" . }}
+<div id="header">
+    {{ partial "top-menu.html" . }}
+    {{ partial "addons-header.html" . }}
+    <div class="title-subheader">
+        <div class="container">
+            <ul>
+                <li><span class="active"><i class="fa fa-th"></i> <a href="{{ $.Site.BaseURL }}addons">All add-ons</a></span></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div id="content" class="container">
+    <div class="row">
+        <div class="col-md-12 filter-column">
+            <form id="criteria">
+                <div class="form-group">
+                    <input type="text" class="form-control" id="filter" placeholder="Filter...">
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12 addon-items">
+            {{ $addons := where (.Data.Pages.ByParam "addon") ".Params.description" "!=" nil }}
+            <div class="row">
+            {{ range $index, $element := $addons }}
+            {{ if eq (mod $index 3) 0 }}
+                <div class="col-md-4 filterable-item" style="margin-bottom: 20px;">
+                    <div class="item-wrapper">
+                        {{ .Render "summary" }}
+                    </div>
+                </div>
+            {{ else }}
+                <div class="col-md-4 filterable-item" style="margin-bottom: 20px;">
+                    <div class="item-wrapper">
+                        {{ .Render "summary" }}
+                    </div>
+                </div>
+            {{ end }}
+                {{ if eq $index (sub (len $addons) 1) }}
+                </div>
+                {{ end }}
+            {{ end }}
+        </div>
+        <h4 style="text-align: center; margin-top: 20px;">{{ len $addons }} add-on(s)</h4>
+    </div>
+</div>
+{{ partial "filter-script.html" }}
+<div id="footer">
+    {{ partial "footer.html" . }}
+</div>
+{{ partial "modals.html" . }}
+{{ partial "styles.html" . }}
+{{ partial "scripts.html" . }}
+</body>
+</html>

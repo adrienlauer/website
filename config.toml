@@ -60,9 +60,12 @@ MetaDataFormat = "yaml"
 
   "numRelatedPosts" = 2
 
-[blackfriday]
-  angledQuotes = true
-  plainIdAnchors = true
+
+[markup]
+  defaultMarkdownHandler = "blackfriday"
+  [markup.blackFriday]
+    angledQuotes = true
+    plainIdAnchors = true
 
 [taxonomies]
   tag = "tags"
@@ -72,24 +75,40 @@ MetaDataFormat = "yaml"
 #### Menu                        ####
 #####################################
 
-[[menu.learn-getting-started]]
-    name = "The basics"
-    identifier = "basics"
+[[menu.learn-tutorial]]
+    name = "Getting started"
+    identifier = "getting-started"
     weight = -100
 
-[[menu.learn-getting-started]]
-    name = "REST APIs"
-    identifier = "rest"
+[[menu.learn-tutorial]]
+    name = "Basics"
+    identifier = "basics"
     weight = -90
 
-[[menu.learn-getting-started]]
-    name = "Business code"
-    identifier = "business"
+[[menu.learn-tutorial]]
+    name = "REST APIs"
+    identifier = "rest"
     weight = -80
 
+[[menu.learn-tutorial]]
+    name = "Business & DDD"
+    identifier = "business"
+    weight = -70
 
+[[menu.learn-samples]]
+    name = "Categories"
+    identifier = "categories"
+    weight = -90
 
+[[menu.learn-samples]]
+    name = "Overview"
+    identifier = "overview"
+    weight = -100
 
+[[menu.learn-guides]]
+    name = "Contents"
+    identifier = "contents"
+    weight = -100
 
 [[menu.project]]
     name = "Project info"
@@ -97,65 +116,59 @@ MetaDataFormat = "yaml"
     weight = -100
     url = "/project/"
 
-[[menu.docs-manual]]
-    name = "The basics"
+[[menu.docs-core]]
+    name = "Basics"
     identifier = "basics"
-    weight = -100
-    url = "/docs/basics/"
-
-[[menu.docs-manual]]
-    name = "Core"
-    identifier = "core"
     weight = -90
-    url = "/docs/core/"
+    url = "/docs/core/basics/"
 
-[[menu.docs-manual]]
+[[menu.docs-core]]
     name = "Command-line"
     identifier = "cli"
     weight = -85
-    url = "/docs/cli/"
+    url = "/docs/core/cli/"
 
-[[menu.docs-manual]]
+[[menu.docs-core]]
     name = "Web"
     identifier = "web"
     weight = -80
-    url = "/docs/web/"
+    url = "/docs/core/web/"
 
-[[menu.docs-samples]]
-    name = "The basics"
-    identifier = "basics"
-    weight = -20
-    url = "/docs/samples/"
-
-[[menu.docs-samples]]
-    name = "Available samples"
-    identifier = "samples"
-    weight = -10
-    url = "/docs/samples/"
+[[menu.docs-core]]
+    name = "Advanced"
+    identifier = "advanced"
+    weight = -70
+    url = "/docs/core/advanced/"
 
 [[menu.docs-maven]]
-    name = "The basics"
+    name = "Basics"
     identifier = "basics"
     weight = -30
     url = "/docs/maven/"
 
 [[menu.docs-maven]]
-    name = "Development"
+    name = "Development goals"
     identifier = "development"
     weight = -20
     url = "/docs/maven/"
 
 [[menu.docs-maven]]
-    name = "Application tools"
+    name = "Tool goals"
     identifier = "tools"
     weight = -10
     url = "/docs/maven/"
 
 [[menu.docs-business]]
-    name = "The basics"
+    name = "Basics"
     identifier = "basics"
     weight = -100
     url = "/docs/business/"
+
+[[menu.docs-business]]
+    name = "Tutorial"
+    identifier = "tutorial"
+    weight = -90
+    url = "/docs/business/tutorial"
 
 [[menu.docs-business]]
     name = "Modeling"
@@ -164,59 +177,55 @@ MetaDataFormat = "yaml"
     url = "/docs/business/"
 
 [[menu.docs-business]]
-    name = "Implementing behavior"
+    name = "Behavior"
     identifier = "behavior"
     weight = -60
     url = "/docs/business/"
 
 [[menu.docs-business]]
-    name = "Exposing interfaces"
+    name = "Interfaces"
     identifier = "interfaces"
     weight = -40
     url = "/docs/business/"
 
+[[menu.addons]]
+    name = "Contents"
+    identifier = "contents"
+    weight = -100
+    url = "/addons/"
+
 
 
 #####################################
-#### Zones                       ####
+#### Sections                    ####
 #####################################
 
-[params.zone.Docs]
-  path = "docs"
-  label = "Documentation"
-  logo = "glossary-logo.svg"
+[params.sections.Learn]
+  path = "learn"
+  label = "Learn"
+  logo = "getting-started-logo.svg"
 
-[params.zone.Glossary]
+[params.sections.Docs]
   path = "glossary"
   label = "Glossary"
   logo = "glossary-logo.svg"
 
-[params.zone.Guides]
-  path = "guides"
-  label = "Guides"
-  logo = "guides-logo.svg"
-
-[params.zone.Project]
-  path = "project"
-  label = "Project"
-  logo = "project-logo.svg"
-
-[params.zone.Community]
-  path = "community"
-  label = "Community"
-  logo = "project-logo.svg"
-
-[params.zone.Posts]
-  path = "posts"
-  label = "Posts"
-  logo = "news-logo.svg"
-
-[params.zone.Addons]
+[params.sections.Addons]
   path = "addons"
   label = "Add-ons"
   logo = "addons-logo.svg"
 
-[params.zone.Search]
+[params.sections.Support]
+  path = "project"
+  label = "Project"
+  logo = "project-logo.svg"
+
+[params.sections.Posts]
+  path = "posts"
+  label = "Posts"
+  logo = "news-logo.svg"
+
+[params.sections.Search]
   path = "search"
   label = "Search"
   logo = "search-logo.svg"

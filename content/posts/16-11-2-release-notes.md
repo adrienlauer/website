@@ -15,10 +15,10 @@ zones:
 We are happy to announce the release of SeedStack 16.11 «Kiwi». This is a major release bringing new exciting changes
 such as a cleaner, much more powerful configuration system.<!--more-->
 
-{{% callout info %}}
+{{< callout info >}}
 This post is about the revision 2 of SeedStack 16.11 which is the recommended version as the time of writing. There is 
 no release note for 16.11 and 16.11.1 versions.
-{{% /callout %}}
+{{< /callout >}}
 
 ## W20
 
@@ -29,9 +29,9 @@ separation greatly simplifies the evolution, the documentation and the "market p
 As before, you can still use the [W20 bridge add-on]({{<ref "addons/w20-bridge" >}}) to automate the integration
 between SeedStack and W20.
 
-{{% callout ref %}}
+{{< callout ref >}}
 W20 document is now available on [https://w20-framework.github.io/](https://w20-framework.github.io/).
-{{% /callout %}}
+{{< /callout >}}
 
 ## New features
 
@@ -58,9 +58,9 @@ properties, class
 * Profiles
 * Automatic hiding of sensitive information (like password)
 
-{{% callout ref %}}
+{{< callout ref >}}
 More information [here]({{< ref "docs/core/configuration.md" >}}).
-{{% /callout %}}
+{{< /callout >}}
 
 ### Tooling support
 
@@ -93,9 +93,9 @@ A new add-on integrating some Netflix open-source technologies is now provided. 
 [Netflix Hystrix](https://github.com/Netflix/Hystrix) circuit-breaker and the [OpenFeign](https://github.com/OpenFeign/feign)
 REST client.
 
-{{% callout ref %}}
+{{< callout ref >}}
 More information [here]({{< ref "addons/netflix" >}}).
-{{% /callout %}}
+{{< /callout >}}
 
 ### Bean validation
 
@@ -159,10 +159,10 @@ It is worth noting that:
 * Superclasses are not searched but inheritable annotations will be found if present on a class up in the hierarchy.
 * Meta-annotations (annotations annotated by the searched annotation) are always searched.
 
-{{% callout warning %}}
+{{< callout warning >}}
 This new unified behavior does not deviate a lot from previous version behaviors, but we still recommend that you check your
 annotations, particularly for transaction management which have subtle semantics. 
-{{% /callout %}}
+{{< /callout >}}
 
 ### Utilities
 

@@ -1,10 +1,6 @@
 ---
-title: "JAR Packaging"
-type: "home"
-zones:
-    - "Docs"
-sections:
-    - "Maven"    
+title: "Package"
+subsection: "maven"
 tags:
     - maven
 aliases: /docs/maven-plugin/manual/package    
@@ -21,6 +17,7 @@ A Capsule is a way of packaging and running any application with all its depende
 
 Parameters can be given as system properties (`-DparameterName=parameterValue`) or specified in the `pom.xml` plugin declaration:
 
+{{< html >}}
 <table class="table table-striped table-bordered table-condensed">
     <thead>
     <tr>
@@ -72,6 +69,7 @@ Parameters can be given as system properties (`-DparameterName=parameterValue`) 
     </tr>
     </tbody>
 </table>
+{{< /html >}}
 
 ## Custom Classpath
 
@@ -124,10 +122,10 @@ In the example above:
 * `etc` directories will be added as-is to the classpath
 * JAR files contained in the `lib` directories will be directly added to the classpath. 
 
-{{% callout info %}}
+{{< callout info >}}
 The order of static entries is preserved in the classpath. All static entries are placed before the application
 entries so they can override them. 
-{{% /callout %}}
+{{< /callout >}}
 
 ### Dynamic Classpath
 
@@ -137,10 +135,10 @@ Classpath entries can be specified on the command-line using the `capsule.classp
 java -Dcapsule.classpath="/usr/local/app/etc:/user/local/app/lib/*" -jar my-capsule.jar
 ```
 
-{{% callout info %}}
+{{< callout info >}}
 The order of dynamic entries is preserved in the classpath. All dynamic entries are placed before static entries in
 the classpath so they can override them.
-{{% /callout %}}
+{{< /callout >}}
 
 ## Example
 
@@ -164,7 +162,7 @@ java [jvm-args] -jar my-capsule.jar [args...]
 In addition to any argument already specified in the capsule manifest (with the plugin parameters described above), you 
 can specify any argument to the JVM or to the program as usual.
 
-{{% callout tips %}}
+{{< callout tips >}}
 A lot of options can be specified to alter the default behavior of the Capsule itself. Please refer to the [Capsule user-guide](http://www.capsule.io/user-guide/)
 for more information.
-{{% /callout %}}
+{{< /callout >}}

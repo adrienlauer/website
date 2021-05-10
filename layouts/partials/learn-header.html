@@ -1,3 +1,4 @@
+{{ $headerKey := $.Scratch.Get "subSectionKey" }}
 <div class="title-header small">
     <div class="container">
         <div class="row">
@@ -17,18 +18,23 @@
     <div class="container">
         <ul>
             <li>
-                <span class='{{ if eq .Params.subsection "getting-started" }}active{{ end }}'>
-                    <i class="fa fa-home"></i> <a href="{{ $.Site.BaseURL }}learn/getting-started">Getting started</a>
+                <span class='{{ if eq $headerKey "learn-overview" }}active{{ end }}'>
+                    <i class="fa fa-home"></i> <a href="{{ $.Site.BaseURL }}learn">Overview</a>
                 </span>
             </li>
             <li>
-                <span class='{{ if eq (.Scratch.Get "section") "Manual" }}active{{ end }}'>
-                    <i class="fa fa-dot-circle-o"></i> <a href="{{ $.Site.BaseURL }}docs">Core</a>
+                <span class='{{ if eq $headerKey "learn-tutorial" }}active{{ end }}'>
+                    <i class="fa fa-graduation-cap"></i> <a href="{{ $.Site.BaseURL }}learn/tutorial">Tutorial</a>
                 </span>
             </li>
             <li>
-                <span class='{{ if eq (.Scratch.Get "section") "Business" }}active{{ end }}'>
-                    <i class="fa fa-briefcase"></i> <a href="{{ $.Site.BaseURL }}docs/business">Business</a>
+                <span class='{{ if eq $headerKey "learn-samples" }}active{{ end }}'>
+                    <i class="fa fa-gift"></i> <a href="{{ $.Site.BaseURL }}learn/samples">Samples</a>
+                </span>
+            </li>
+            <li>
+                <span class='{{ if eq $headerKey "learn-guides" }}active{{ end }}'>
+                    <i class="fa fa-book"></i> <a href="{{ $.Site.BaseURL }}learn/guides">Guides</a>
                 </span>
             </li>
             {{ if not .Params.NoMenu }}

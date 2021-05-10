@@ -40,16 +40,16 @@ easy-to-use testing features, like the ability to alter application configuratio
 parameters for a test class, a specific test or both. Although it only supports JUnit 4 for now, support for other testing 
 frameworks is now possible. 
 
-{{% callout info %}}
+{{< callout info >}}
 More information on integration testing [here]({{< ref "docs/core/testing.md" >}})
-{{% /callout %}}
+{{< /callout >}}
 
 Arquillian support is still present in the `seed-testing-arquillian` module, but Web integration testing can now be done
 as a normal test with the launcher swapped for a Web based launched. 
 
-{{% callout info %}}
-More information on Web integration testing [here]({{< ref "docs/web/testing.md" >}})
-{{% /callout %}}
+{{< callout info >}}
+More information on Web integration testing [here]({{< ref "docs/core/web/testing.md" >}})
+{{< /callout >}}
 
 ### OAuth add-on
 
@@ -107,9 +107,9 @@ has switched from Bower to NPM for package management.
 As a result, Web packages are now located under a `node_modules` location instead of a `bower_components` one. Some 
 packages also have a slightly updated name (when the NPM package had a different name from the Bower one).
 
-{{% callout info %}}
+{{< callout info >}}
 All W20 components take this location change into account but **you will also have to update your W20 frontend explicit dependencies.** 
-{{% /callout %}}
+{{< /callout >}}
 
 ## Component versions
 

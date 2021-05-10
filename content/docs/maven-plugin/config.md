@@ -1,10 +1,6 @@
 ---
-title: "List all configuration options"
-type: "home"
-zones:
-    - "Docs"
-sections:
-    - "Maven"    
+title: "Config"
+subsection: "maven"
 tags:
     - maven
 aliases: /docs/maven-plugin/manual/config    
@@ -16,15 +12,16 @@ menu:
 
 The `config` goal dumps all the configuration options available in the project. <!--more-->
 
-{{% callout tips %}}
+{{< callout tips >}}
 This goal executes the [config tool](/docs/seed/configuration/#configuration-options-dump) on the project.
 It is a shortcut for the [tool goal](../tool) with `config` specified as first argument.
-{{% /callout %}}
+{{< /callout >}}
 
 ## Parameters
 
 Parameters can be given as system properties (`-DparameterName=parameterValue`) or specified in the `pom.xml` plugin declaration:
 
+{{< html >}}
 <table class="table table-striped table-bordered table-condensed">
     <thead>
     <tr>
@@ -43,6 +40,7 @@ Parameters can be given as system properties (`-DparameterName=parameterValue`) 
     </tr>
     </tbody>
 </table>
+{{< /html >}}
 
 ## Examples
 

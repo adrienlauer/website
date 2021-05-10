@@ -1,10 +1,6 @@
 ---
-title: "Project generation"
-type: "home"
-zones:
-    - "Docs"
-sections:
-    - "Maven"    
+title: "Generate"
+subsection: "maven"
 tags:
     - maven
 aliases: /docs/maven-plugin/manual/generate    
@@ -17,10 +13,16 @@ menu:
 To create a SeedStack project from scratch you can use `generate` goal from the SeedStack Maven Plugin.
 This goal is invoked from the command line.<!--more-->
 
+{{< callout info >}}
+This is an interactive goal that can be run without any parameter. It will ask you various questions about the
+project you want to generate.
+{{< /callout >}}
+
 ## Parameters
 
-Parameters should be given as system properties (`-DparameterName=parameterValue`):
+If needed, parameters should be given as system properties (`-DparameterName=parameterValue`):
 
+{{< html >}}
 <table class="table table-striped table-bordered table-condensed">
     <thead>
     <tr>
@@ -83,6 +85,7 @@ Parameters should be given as system properties (`-DparameterName=parameterValue
     </tr>
     </tbody>
 </table>
+{{< /html >}}
 
 ## Examples
 

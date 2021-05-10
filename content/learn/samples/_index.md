@@ -1,17 +1,13 @@
 ---
-title: "Download samples"
-type: "home"
-zones:
-    - "Docs"
-sections:
-    - "Samples"    
+title: "How to download"
+subsection: "samples"    
 aliases:
     - /docs/basics/samples
 tags:
     - tutorial
 menu:
-    docs-samples:
-        parent: "basics"
+    learn-samples:
+        parent: "overview"
         weight: 10
 ---
 
@@ -19,9 +15,9 @@ Try out the samples below to learn what SeedStack is capable of.<!--more-->
 
 Each sample is a Maven project that can be imported and launched in your favorite IDE.
 
-{{% callout tips %}}
+{{< callout tips >}}
 Each sample contains a `README.md` file describing how to build and launch it. 
-{{% /callout %}} 
+{{< /callout >}} 
 
 ## ZIP
 

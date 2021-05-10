@@ -45,9 +45,9 @@ servlets not activated by default (for security reasons):
 * CPU servlet, publishing a sample of CPU profiling in the [GPerfTools](https://github.com/gperftools/gperftools) format.
 * Threads servlet, publishing a thread dump.
 
-{{% callout info %}}
+{{< callout info >}}
 The Metrics library itself has also been updated.
-{{% /callout %}}
+{{< /callout >}}
 
 ## Fixes
 
@@ -79,10 +79,10 @@ There are several benefits from this simpler approach:
 
 ### External certificates
 
-{{% callout warning %}}
+{{< callout warning >}}
 For security reasons, the ability to load external certificates (living outside a keystore) has been removed. The best
 practice is always to store your certificates in a store (keystore or truststore depending on their intented usage). 
-{{% /callout %}}
+{{< /callout >}}
 
 ## Component versions
 

@@ -1,21 +1,8 @@
-{{ $currentPage := . }}
-{{ $zone := .Section }}
-{{ if eq $zone "Guides" }}
-{{ $.Scratch.Set "menuKey" .Params.Guide }}
-{{ else if eq $zone "Addons" }}
-{{ $.Scratch.Set "menuKey" .Params.Addon }}
-{{ else }}
-{{ if isset .Params "subsection" }}
-{{ $.Scratch.Set "menuKey" (print (lower $zone) "-" (lower .Params.subsection)) }}
-{{ else }}
-{{ $.Scratch.Set "menuKey" (lower $zone)}}
-{{ end}}
-{{ end }}
-
-{{ $menuKey := $.Scratch.Get "menuKey" }}
+{{ $menuKey := $.Scratch.Get "subSectionKey" }}
 {{ if $menuKey }}
 {{ $menu := index .Site.Menus $menuKey }}
 {{ if $menu }}
+{{ $currentPage := . }}
 <nav class="side-menu collapse side-menu-collapse" data-role="navigation">
     <div class="list-group">
         <ul class="nav">

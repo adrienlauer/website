@@ -108,6 +108,11 @@
     list-style-type: none;
 }
 
+.toc ul > li > ul {
+    padding-left: 20px;
+    list-style-type: none;
+}
+
 .toc ul li a {
     color: #333;
 }

@@ -44,7 +44,7 @@ mvn -U org.seedstack:seedstack-maven-plugin:generate -Dtype=cli
 
 # Business domain module
 
-A reusable JAR designed to contain one or more business domain(s) based on the [business framework]({{< ref "docs/business/index.md" >}}).
+A reusable JAR designed to contain one or more business domain(s) based on the [business framework]({{< ref "docs/business" >}}).
 
 ```bash
 mvn -U org.seedstack:seedstack-maven-plugin:generate -Dtype=domain

@@ -1,10 +1,6 @@
 ---
-title: "Usage"
-type: "home"
-zones:
-    - "Docs"
-sections:
-    - "Maven"    
+title: "Maven plugin usage"
+subsection: "maven"
 tags:
     - maven
 menu:

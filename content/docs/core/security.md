@@ -1,16 +1,12 @@
 ---
 title: "Security"
-type: "home"
-zones:
-    - "Docs"
-sections:
-    - "Manual"    
+subsection: "core"
 tags:
     - security
 aliases: /docs/seed/manual/security    
 menu:
-    docs-manual:
-        parent: "core"
+    docs-core:
+        parent: "basics"
         weight: 5
 ---
 
@@ -21,9 +17,9 @@ The `seed-security-core` module provides application-level security.<!--more--> 
 * Authorization (defines which roles and permissions a subject can have),
 * Access-control (enforces access restrictions to entry-points and/or to any arbitrary code). 
 
-{{% callout info %}}
+{{< callout info >}}
 The security engine used by SeedStack is [Apache Shiro](http://shiro.apache.org/).
-{{% /callout %}}
+{{< /callout >}}
 
 Security support requires the following dependency in your project:
 
@@ -58,11 +54,11 @@ possible when a subject interacts with those resources. Consider the following e
 CRUD actions can frequently be found in permissions but any meaningful verb can be used. The fundamental idea is that
 a permission should combine a resource description with an action description.
 
-{{% callout info %}}
+{{< callout info >}}
 Permission statements reflect behavior (actions associated with resource types) only. They do **not** reflect who is able to 
 perform such behavior. Defining who (which subject) can do what (which permission) is done by assigning permission to 
 subjects.
-{{% /callout %}}
+{{< /callout >}}
 
 #### Simple usage
 
@@ -134,7 +130,7 @@ data sources.
 
 Configuring realms is done as below:
     
-{{% config p="security.realms" %}}
+{{< config p="security.realms" >}}
 ```yaml
 security:
   # Ordered list of security realms used to authenticate and authorize subjects
@@ -149,7 +145,7 @@ security:
       # Name of the permission resolver used for this realm (optional)
       permissionResolver: (String)
 ```
-{{% /config %}}    
+{{< /config >}}    
 
 ### Built-in realms
 
@@ -159,17 +155,17 @@ SeedStack provides the following realms:
 * `X509CertificateRealm` which uses X509 certificates.
 * `LdapRealm` which uses an LDAP directory.
 
-{{% callout warning %}}
+{{< callout warning >}}
 `ConfigurationRealm` is the default realm, which is fine for development and testing purposes. You may need to use
 more robust and flexible realms in production, like the `LdapRealm`.
-{{% /callout %}}
+{{< /callout >}}
 
 #### Configuration-based realm
 
 This realm relies on the application configuration to authenticate subject and retrieve their roles. It is mainly intended
 to be used for testing purposes. To declare subjects (called users in this realm), use the following configuration:
  
-{{% config p="security.users" %}}
+{{< config p="security.users" >}}
 ```yaml
 security:
   # Map of users and their properties
@@ -181,7 +177,7 @@ security:
       # List of roles granted to the user.
       roles: [ role1, role2 ]
 ```
-{{% /config %}}   
+{{< /config >}}   
  
 This configuration defines one subject named `user1` with its respective password and roles.
 
@@ -210,7 +206,7 @@ Each realm has its own permission resolver. It resolves the permissions granted 
 
 This is the default permission resolver. It uses the application configuration to resolve permissions for roles:
 
-{{% config p="security.permissions" %}}
+{{< config p="security.permissions" >}}
 ```yaml
 security:
   # Map of permissions for a particular role
@@ -223,7 +219,7 @@ security:
       - permission1
       - permission4
 ```
-{{% /config %}}  
+{{< /config >}}  
 
 #### Custom permission resolver
 
@@ -241,7 +237,7 @@ application role name.
 
 This is the default role mapper. It uses the application configuration to map role names:
 
-{{% config p="security.roles" %}}
+{{< config p="security.roles" >}}
 ```yaml
 security:
   # Mapping of role names
@@ -251,7 +247,7 @@ security:
     role3: 'ORG.APP.{location}.ROLE3'
     role4: '*'
 ```
-{{% /config %}}  
+{{< /config >}}  
 
 The configuration above configuration defines the following mappings:
 
@@ -261,9 +257,9 @@ The configuration above configuration defines the following mappings:
 into a security scope. As such a scoped `role3` is attributed to the subject, which is only valid in `FR` location.
 * Application-role `role4` is attributed to every subject authenticated.
 
-{{% callout warning %}}
+{{< callout warning >}}
 An application role is granted when **at least one** of the realm roles in the list is granted (logical OR).
-{{% /callout %}}
+{{< /callout >}}
 
 #### Custom role mapper
 
@@ -316,11 +312,11 @@ For instance, having the `APP.ADMIN` realm role is enough to have the `manager` 
 
 Access-control can be done by two means: annotation-based checks and programmatic checks.
 
-{{% callout tips %}}
+{{< callout tips >}}
 It is **strongly recommended** to check for permissions, instead of checking for roles. Since a permission represent
 an action, it is a natural fit for protecting the portion of code implementing this very action. On the contrary a 
 role check is generally too broad.
-{{% /callout %}}
+{{< /callout >}}
 
 ### Annotation-based checks
 
@@ -350,10 +346,10 @@ public class SomeClass {
 }
 ```
 
-{{% callout danger %}}
+{{< callout danger >}}
 Note that these annotation-based security checks are implemented with **method interception** and are subject to 
-**[its limitations]({{< ref "learn/getting-started/dependency-injection.md#method-interception" >}})**.
-{{% /callout %}}
+**[its limitations]({{< ref "learn/tutorial/dependency-injection.md#method-interception" >}})**.
+{{< /callout >}}
 
 ### Programmatic checks
 

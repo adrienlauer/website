@@ -1,10 +1,6 @@
 ---
-title: "Running"
-type: "home"
-zones:
-    - "Docs"
-sections:
-    - "Maven"    
+title: "Run"
+subsection: "maven"
 tags:
     - maven
 aliases: /docs/maven-plugin/manual/run    
@@ -60,8 +56,8 @@ corresponding arguments:
 mvn seedstack:run -Dargs="run-job --job helloWorldJob"
 ```
 
-{{% callout info %}}
+{{< callout info >}}
 Note that a SeedStack CLI application needs at least one {{< java "org.seedstack.seed.cli.CommandLineHandler" >}} in the
-classpath which name must be specified as an argument. In this example we assume that the [SeedStack Spring bridge add-on]({{< ref "addons/spring-bridge/batch.md" >}})
+classpath which name must be specified as an argument. In this example we assume that the [SeedStack Spring bridge add-on]({{< ref "addons/spring-bridge/batch" >}})
 `run-job` command-line handler is also present in the classpath.
-{{% /callout %}}
+{{< /callout >}}

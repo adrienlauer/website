@@ -1,16 +1,12 @@
 ---
 title: "Package layout"
-type: "home"
-zones:
-    - "Docs"
-sections:
-    - "Business"    
+subsection: "business"
 tags:
     - domain-driven design
     - architecture
 menu:
     docs-business:
-        parent: "architecture"
+        parent: "basics"
         weight: 6
 ---
 
@@ -66,10 +62,10 @@ The domain package (or each sub-domain package if relevant) contains:
         - DomainService2
 ```
 
-{{% callout warning %}}
+{{< callout warning >}}
 Implementations can be located alongside their interface if they are independent of any technical aspect. 
 Otherwise they must be located in the infrastructure.
-{{% /callout %}}
+{{< /callout >}}
 
 ## The application
 
@@ -89,10 +85,10 @@ use cases. This package can then be split into sub-packages as you see fit.
     ...
 ```
 
-{{% callout warning %}}
+{{< callout warning >}}
 As for the domain, implementations can be located alongside their interface if they are independent of any technical aspect. 
 Otherwise they must be located in the infrastructure.
-{{% /callout %}}
+{{< /callout >}}
 
 ## The interface(s)
 
@@ -131,10 +127,10 @@ Both should be placed alongside the DTO, in the same package.
         ...
 ```
 
-{{% callout warning %}}
+{{< callout warning >}}
 As for the domain and the application, implementations can be located alongside their interface if they are independent 
 of any technical aspect. Otherwise they must be located in the infrastructure.
-{{% /callout %}}
+{{< /callout >}}
 
 ## The infrastructure
 

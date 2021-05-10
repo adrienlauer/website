@@ -39,6 +39,6 @@ executable JARs](/docs/seed/maven-plugin/package).
 Should you require the usage of an external Servlet container like Tomcat, the Java framework is automatically tested and
 fully compatible with several popular Servlet containers, listed below.
 
-{{% callout tips %}}
+{{< callout tips >}}
 A JEE container is **NOT** necessary to run SeedStack Java applications but can be used if necessary.
-{{% /callout %}}
+{{< /callout >}}

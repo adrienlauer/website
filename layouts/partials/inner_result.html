@@ -1,14 +1,14 @@
-{{ $zone := index .Params.zones 0 | lower }}
-{{ $zoneHref := printf "%s%s" ($.Site.BaseURL) (index .Site.Params.zone $zone "path") }}
-{{ $zoneLogo := index .Site.Params.zone $zone "logo" }}
+{{ $sectionKey := $.Scratch.Get "sectionKey" }}
+{{ $sectionHref := printf "%s%s" ($.Site.BaseURL) (index .Site.Params.sections $sectionKey "path") }}
+{{ $sectionLogo := index .Site.Params.sections $sectionKey "logo" }}
 {{ $.Scratch.Set "hasPrevious" false }}
 <article class="inner-results">
-    <h3><a href='{{ $zoneHref }}'><img src='/img/logos/{{ $zoneLogo }}'></a>
-        {{ if eq $zone "addons" }}
+    <h3><a href='{{ $sectionHref }}'><img src='/img/logos/{{ $sectionLogo }}'></a>
+        {{ if eq $sectionKey "addons" }}
             {{ $.Scratch.Set "href" (delimit (first 5 (split .Permalink "/")) "/") }}
             <a href='{{ $.Scratch.Get "href" }}'>{{ or .Params.parent .Title }}</a>
             {{ $.Scratch.Set "hasPrevious" true }}
-        {{ else if eq $zone "guides" }}
+        {{ else if eq $sectionKey "guides" }}
             {{ $.Scratch.Set "href" (delimit (first 5 (split .Permalink "/")) "/") }}
             <a href='{{ $.Scratch.Get "href" }}'>{{ or .Params.parent .Title }}</a>
             {{ $.Scratch.Set "hasPrevious" true }}

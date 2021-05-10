@@ -1,0 +1,10 @@
+<div style="display:table; width: 100%">
+    <div style='display:table-cell; width: {{ .Get "width" }}px; vertical-align: middle;'>
+        <a href='{{ $.Site.BaseURL }}{{ .Get "href" }}'>
+            <img class="pull-left" src='{{ $.Site.BaseURL }}img/{{ .Get "src" }}' width="80%">
+        </a>
+    </div>
+    <div style="display:table-cell; vertical-align: middle;">
+        {{ .Inner | markdownify }}
+    </div>
+</div>

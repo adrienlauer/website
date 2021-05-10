@@ -1,10 +1,6 @@
 ---
-title: "Hot-reloading"
-type: "home"
-zones:
-    - "Docs"
-sections:
-    - "Maven"    
+title: "Watch"
+subsection: "maven"
 tags:
     - maven
 menu:
@@ -19,6 +15,7 @@ The `watch` goal runs any self-executable SeedStack application in hot-reloading
 
 Parameters should be given as system properties (`-DparameterName=parameterValue`):
 
+{{< html >}}
 <table class="table table-striped table-bordered table-condensed">
     <thead>
     <tr>
@@ -37,6 +34,7 @@ Parameters should be given as system properties (`-DparameterName=parameterValue
     </tr>
     </tbody>
 </table>
+{{< /html >}}
 
 ## Limitations
 
@@ -48,9 +46,9 @@ will not be updated. A full restart of the watch goal will be necessary.
 
 ## Example
 
-{{% callout info %}}
+{{< callout info >}}
 Application refresh is only supported for Web application using the Undertow embedded server.
-{{% /callout %}}
+{{< /callout >}}
 
 Start the application in hot-reloading mode with:
 

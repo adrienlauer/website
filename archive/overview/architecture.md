@@ -45,11 +45,11 @@ mechanism, they can detect predefined code patterns such as:
 * Resources matching a specific regex,
 * etc...
 
-{{% callout info %}}
+{{< callout info >}}
 Code pattern detection is heavily used throughout SeedStack, for instance to dynamically define injection bindings, to 
 automatically register classes or to enable particular features. Combined with the convention-over-configuration principle
 and sensible default values, it greatly simplifies SeedStack usage.    
-{{% /callout %}}
+{{< /callout >}}
 
 ## Lifecycle
 
@@ -66,7 +66,7 @@ in the correct order. At this point, the application is fully operational.
 * In the stopping phase, the runtime stops the kernel which invokes the stopping logic of all plugins in the correct 
 order. A this point, the application is stopped.
 
-{{% callout info %}}
+{{< callout info >}}
 The kernel is a part of [Nuun IO](https://github.com/nuun-io) and is independent of SeedStack. For more information
 about it, please check [its own documentation](https://github.com/nuun-io/kernel/wiki).
-{{% /callout %}}
+{{< /callout >}}

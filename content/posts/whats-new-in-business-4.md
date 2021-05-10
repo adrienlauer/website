@@ -41,10 +41,10 @@ public class SomeClass {
 }
 ```
 
-{{% callout info %}}
+{{< callout info >}}
 Specification translation is currently only implemented in [JPA]({{< ref "addons/jpa" >}}) and 
 [MongoDB Morphia]({{< ref "addons/mongodb/morphia.md" >}}) add-ons.
-{{% /callout %}}
+{{< /callout >}}
 
 ## New pagination API
 

@@ -21,7 +21,7 @@
             {{ end }}
         </div>
         <div style="display:table-cell; vertical-align: middle;">
-            {{ .Inner }}
+            {{ .Inner | markdownify }}
         </div>
     </div>
 </div>

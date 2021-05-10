@@ -38,7 +38,7 @@ A lot of modules have been extracted as add-ons. As such the foundation framewor
 The full list of available add-ons is available [here]({{< baseUrl >}}addons). Click on the add-on title to access
 its documentation.
 
-{{% callout info %}}
+{{< callout info >}}
 The refactoring into add-ons doesn't induce any behavior breaking change. These changes are automatically done by the upgrade
 tool but some cleanup may be required:
 
@@ -48,7 +48,7 @@ be duplicated through inheritance.
 * Business framework JPA-specific classes have been moved to the JPA add-on. As such the tool will convert any `business-jpa`
 dependency into a `jpa` add-on dependency. If you did not also have the `business-core` dependency in the first place, it
 will be missing: add it manually if you're in that case.
-{{% /callout %}}
+{{< /callout >}}
 
 ### Simplified packaging
 
@@ -58,15 +58,15 @@ sub-package has been merged into the module top-level package. When an SPI is pr
 `org.seedstack.[modulename].spi`. Finally all internal classes are located under `org.seedstack.[modulename].internal`.
 **No compatibility is guaranteed for internal classes so your code should never rely on them.**
 
-{{% callout info %}}
+{{< callout info >}}
 The simplified packaging doesn't induce any behavior breaking change. These changes are automatically done by the upgrade
 tool.
-{{% /callout %}}
+{{< /callout >}}
 
-{{% callout tips %}}
+{{< callout tips >}}
 As the package layout is simpler, we decided to aggregate the Javadoc for the whole distribution (foundation frameworks
 and official add-ons) into a [unique aggregated Javadoc](/javadoc).
-{{% /callout %}}
+{{< /callout >}}
 
 ### Simplified configuration
 
@@ -84,7 +84,7 @@ org.seedstack.jpa.units
 org.seedstack.jdbc.datasources
 ```
 
-{{% callout info %}}
+{{< callout info >}}
 These changes are automatically done by the upgrade tool but some cleanup may be required. If a part of a key is defined
 as a section, the upgrade tool may not recognize it:
 
@@ -96,7 +96,7 @@ jdbc.datasources
 
 In this case, as the keys are broken apart, the tool cannot recognize the whole key and will not replace it. Please
 review your configuration files for any occurence of this case.
-{{% /callout %}}
+{{< /callout >}}
 
 ### Dependency management
 
@@ -178,7 +178,7 @@ For `w20-bridge-addon` user, it is necessary to include the additional fragments
 
 ### Cryptography
 
-Seed provides a new [cryptography module]({{< ref "docs/core/crypto.md" >}}) which allow you to easily configure and use keystores.
+Seed provides a new [cryptography module]({{< ref "docs/core/advanced/crypto.md" >}}) which allow you to easily configure and use keystores.
 It also provides a simpler API to encrypt and decrypt data.
 
 ### Domain registry
@@ -200,9 +200,9 @@ A static equivalent would be limited to an hard-coded locale value:
 TaxPolicy taxPolicy;
 ```
 
-{{% callout tips %}}
+{{< callout tips >}}
 This new registry can be used for factories, policies, repositories and services.
-{{% /callout %}}
+{{< /callout >}}
 
 ### Spring-managed JPA transactions
 
@@ -215,7 +215,7 @@ transactions. More information about this feature [here]({{< ref "addons/spring-
 
 Three new add-ons are now provided to use popular NoSQL databases:
 
-* [MongoDB add-on]({{< ref "addons/mongodb" >}}),
+* [MongoDB add-on]({{< ref "addons/mongodb/basics" >}}),
 * [Redis add-on]({{< ref "addons/redis" >}}),
 * [Neo4J add-on]({{< ref "addons/neo4j" >}}),
 

@@ -1,10 +1,6 @@
 ---
-title: "Encrypting secrets"
-type: "home"
-zones:
-    - "Docs"
-sections:
-    - "Maven"    
+title: "Crypt"
+subsection: "maven"
 tags:
     - maven
 aliases: /docs/maven-plugin/manual/crypt    
@@ -17,20 +13,21 @@ menu:
 The `crypt` goal encrypts the given argument using the application configured `master` key store and the specified alias. <!--more-->
 This allows to [encrypt sensitive configuration values](/docs/seed/manual/crypto#encrypting-configuration-sensitive-values). 
 
-{{% callout tips %}}
+{{< callout tips >}}
 This goal executes the [crypt tool](/docs/seed/manual/crypto#the-crypt-tool) on the project.
 It is a shortcut for the [tool goal](../tool) with `crypt` specified as first argument.
-{{% /callout %}}
+{{< /callout >}}
 
-{{% callout info %}}
+{{< callout info >}}
 This goal requires a properly configured key store, named `master`, in the application. See [this page](/docs/seed/manual/crypto#key-stores)
 for more information about configuration key stores.
-{{% /callout %}}
+{{< /callout >}}
 
 ## Parameters
 
 Parameters can be given as system properties (`-DparameterName=parameterValue`) or specified in the `pom.xml` plugin declaration:
 
+{{< html >}}
 <table class="table table-striped table-bordered table-condensed">
     <thead>
     <tr>
@@ -49,6 +46,7 @@ Parameters can be given as system properties (`-DparameterName=parameterValue`) 
     </tr>
     </tbody>
 </table>
+{{< /html >}}
 
 ## Examples
 

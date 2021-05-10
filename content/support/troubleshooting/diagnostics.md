@@ -35,10 +35,10 @@ web:
   requestDiagnostic: true
 ``` 
 
-{{% callout warning %}}
+{{< callout warning >}}
 Don't enable that setting in any high-volume environment as it has the potential to fill your disk space very quickly and
 diminish application performance. **Do not use in production.**
-{{% /callout %}}
+{{< /callout >}}
 
 ## Diagnostic tool
 
@@ -52,7 +52,7 @@ During project development, you can invoke the `diag` tool from the following Ma
 mvn seedstack:diag
 ```  
 
-{{% callout tips %}}
+{{< callout tips >}}
 As the diagnostic collects various information about the environment it can help troubleshoot issues that arise during
 development, such as:
 
@@ -60,7 +60,7 @@ development, such as:
 * Inconsistent versions between plugins,
 * System properties values,
 * ... 
-{{% /callout %}}
+{{< /callout >}}
 
 ### In staging/production
 
@@ -70,10 +70,10 @@ In staging or production environments, you can invoke the `diag` tool directly f
 java -Dseedstack.tool=diag -jar my-project-capsule.jar
 ```  
 
-{{% callout tips %}}
+{{< callout tips >}}
 In staging/production, diagnostics can be useful to see if reality match expectations, like:
 
 * Missing additional classpath locations,
 * Application misconfiguration,
 * ... 
-{{% /callout %}}
+{{< /callout >}}

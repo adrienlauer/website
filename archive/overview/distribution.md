@@ -47,7 +47,7 @@ snippet in your project root POM:
 
 With this import, all artifacts under `org.seedstack.*` group identifiers have their version managed. 
 
-{{% callout info %}}
+{{< callout info >}}
 You can still override the version of a particular component by adding a specific dependency management AFTER the import:
 
     <dependencyManagement>
@@ -61,7 +61,7 @@ You can still override the version of a particular component by adding a specifi
             </dependency>
         <dependencies>
     <dependencyManagement>
-{{% /callout %}}
+{{< /callout >}}
 
 # Composite dependencies
 
@@ -83,10 +83,10 @@ The available composites are:
 * The `rest` composite is for REST microservices.
 * The `web` composite is for classic Web applications with a user interface.
 
-{{% callout tips %}}
+{{< callout tips >}}
 It is recommended to only use one composite per project module. Note that you can add any additional dependency you may 
 require (such as add-ons), besides the composite.
-{{% /callout %}}
+{{< /callout >}}
 
 # Archetypes
 
@@ -94,9 +94,9 @@ The distribution contains [Maven archetypes](https://maven.apache.org/guides/int
 for typical project types. The archetypes are used by the [generate goal](../maven-plugin/generate/) of the SeedStack Maven 
 plugin to provide project generation.
 
-{{% callout info %}}
+{{< callout info >}}
 Learn how to use these archetype by creating a project by reading the [getting started section](/getting-started).
-{{% /callout %}}
+{{< /callout >}}
 
 # Custom distribution
 
@@ -105,7 +105,7 @@ It is possible to create a custom distribution for your organization. This can b
 * To manage your own organization-specific add-ons and provide dependency management for them,
 * To override the version of some of SeedStack components by a newer or older one.
 
-{{% callout tips %}}
+{{< callout tips >}}
 Maven dependency management import is transitive so you can import the SeedStack open-source BOM in your own and only 
 specify the differences after the import.
-{{% /callout %}}
+{{< /callout >}}

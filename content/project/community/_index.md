@@ -16,19 +16,19 @@ Contact SeedStack members, file issues or ask for help.<!--more-->
 The [#seedstack](irc://chat.freenode.net/seedstack) IRC on the FreeNode community is intended to chat with the SeedStack 
 team and other users.
 
-{{% callout tips %}}
+{{< callout tips >}}
 Join the chat room directly in your browser by using [KiwiIRC](https://kiwiirc.com/client/irc.freenode.net#seedstack).
-{{% /callout %}}
+{{< /callout >}}
 
 ## Mailing list
 
 You can ask for support on the [Google Group](https://groups.google.com/forum/#!forum/seedstack) or directly on the 
 mailing list by sending an email to [seedstack@googlegroups.com](mailto:seedstack@googlegroups.com). 
 
-{{% callout info %}}
+{{< callout info >}}
 Note that you must already belong to the group to be able to participate. To join, go to the [Google Group](https://groups.google.com/forum/#!forum/seedstack)
 and click the "Join" button.
-{{% /callout %}}
+{{< /callout >}}
  
 ## StackOverflow
 

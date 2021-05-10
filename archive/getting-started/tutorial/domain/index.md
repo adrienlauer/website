@@ -13,7 +13,7 @@ menu:
         weight: 20
 ---
 
-Now it is time to write the domain of the application. To do so, we will use the [business framework]({{< ref "docs/business/index.md" >}}) which
+Now it is time to write the domain of the application. To do so, we will use the [business framework]({{< ref "docs/business" >}}) which
 is implementing Domain-Driven Design principles and patterns.<!--more-->
 
 # The domain model

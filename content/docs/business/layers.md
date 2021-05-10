@@ -1,17 +1,13 @@
 ---
 title: "Layers"
-type: "home"
-zones:
-    - "Docs"
-sections:
-    - "Business"    
+subsection: "business"
 tags:
     - domain-driven design
     - architecture 
 aliases: /docs/business/architecture    
 menu:
     docs-business:
-        parent: "architecture"
+        parent: "basics"
         weight: 5
 ---
 
@@ -44,9 +40,9 @@ Technical dependencies are injected through these interfaces:
 **The interface, application and domain layers are completely decoupled of any technical aspects.** The architecture is made
 more flexible by allowing different implementations of an interface to be injected.
 
-{{% callout info %}}
-In SeedStack, the Dependency Inversion Principle is implemented by [dependency injection]({{< ref "learn/getting-started/dependency-injection.md" >}}).
-{{% /callout %}}
+{{< callout info >}}
+In SeedStack, the Dependency Inversion Principle is implemented by [dependency injection]({{< ref "learn/tutorial/dependency-injection.md" >}}).
+{{< /callout >}}
 
 ## Layers
 

@@ -1,15 +1,11 @@
 ---
 title: "Basic samples"
-type: "home"
-zones:
-    - "Docs"
-sections:
-    - "Samples"    
+subsection: "samples"    
 tags:
     - tutorial
 menu:
-    docs-samples:
-        parent: "samples"
+    learn-samples:
+        parent: "categories"
         weight: 20
 ---
 
@@ -29,7 +25,7 @@ A lot of small samples, demonstrating basic SeedStack features:
 * WebSocket,
 * Integration testing.
 
-{{% callout ref %}}
+{{< callout ref >}}
 GitHub: https://github.com/seedstack/samples/tree/master/basics
-{{% /callout %}}
+{{< /callout >}}
 

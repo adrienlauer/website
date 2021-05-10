@@ -1,15 +1,11 @@
-{{ if (isset .Params.sections 0) }}
-    {{ .Scratch.Set "section" (index .Params.sections 0) }}
-{{ else }}
-    {{ .Scratch.Set "section" .Title }}
-{{ end }}
+{{ $headerKey := $.Scratch.Get "subSectionKey" }}
 <div class="title-header small">
     <div class="container">
         <div class="row">
             <div class="col-md-9 col-sm-12">
                 <h1>Documentation</h1>
                 <p class="hidden-xs">
-                    Reference manual for SeedStack base features.
+                    Reference documentation for core framework, business framework and maven plugin.
             </div>
             <div class="col-md-3 hidden-sm hidden-xs">
                 <div class="header-image-wrapper">
@@ -23,33 +19,23 @@
     <div class="container">
         <ul>
             <li>
-                <span class='{{ if eq (.Scratch.Get "section") "Home" }}active{{ end }}'>
-                    <i class="fa fa-home"></i> <a href="{{ $.Site.BaseURL }}docs">Home</a>
+                <span class='{{ if eq $headerKey "docs-overview" }}active{{ end }}'>
+                    <i class="fa fa-home"></i> <a href="{{ $.Site.BaseURL }}docs">Overview</a>
                 </span>
             </li>
             <li>
-                <span class='{{ if eq (.Scratch.Get "section") "Manual" }}active{{ end }}'>
-                    <i class="fa fa-dot-circle-o"></i> <a href="{{ $.Site.BaseURL }}docs">Core</a>
+                <span class='{{ if eq $headerKey "docs-core" }}active{{ end }}'>
+                    <i class="fa fa-dot-circle-o"></i> <a href="{{ $.Site.BaseURL }}docs/core">Core</a>
                 </span>
             </li>
             <li>
-                <span class='{{ if eq (.Scratch.Get "section") "Business" }}active{{ end }}'>
+                <span class='{{ if eq $headerKey "docs-business" }}active{{ end }}'>
                     <i class="fa fa-briefcase"></i> <a href="{{ $.Site.BaseURL }}docs/business">Business</a>
                 </span>
             </li>
             <li>
-                <span class='{{ if eq (.Scratch.Get "section") "Maven" }}active{{ end }}'>
+                <span class='{{ if eq $headerKey "docs-maven" }}active{{ end }}'>
                     <i class="fa fa-cog"></i> <a href="{{ $.Site.BaseURL }}docs/maven-plugin">Maven plugin</a>
-                </span>
-            </li>
-            <li>
-                <span class='{{ if eq (.Scratch.Get "section") "Samples" }}active{{ end }}'>
-                    <i class="fa fa-gift"></i> <a href="{{ $.Site.BaseURL }}docs/samples">Samples</a>
-                </span>
-            </li>
-            <li>
-                <span>
-                    <i class="fa fa-medkit"></i> <a target="_blank" href="{{ $.Site.BaseURL }}docs/troubleshooting">Troubleshooting</a>
                 </span>
             </li>
             <li>

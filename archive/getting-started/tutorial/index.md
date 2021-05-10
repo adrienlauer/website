@@ -16,10 +16,10 @@ menu:
 Welcome to the SeedStack tutorial! It is intended to walk you through the most interesting features of SeedStack, by 
 making you build a simple Web application from scratch.<!--more-->
 
-{{% callout info %}}
-SeedStack can be used for any type of project and provides templates for several [predefined project types]({{< ref "getting-started/project-templates/index.md" >}}).
+{{< callout info >}}
+SeedStack can be used for any type of project and provides templates for several [predefined project types]({{< ref "getting-started/project-templates" >}}).
 This tutorial is focused on a **[Web project template]({{< ref "getting-started/project-templates/web.md" >}})**.
-{{% /callout %}}
+{{< /callout >}}
 
 # Project generation
 
@@ -45,14 +45,14 @@ The project is immediately buildable. Go into the project directory and run the 
 mvn clean install
 ```
 
-{{% callout info %}}
+{{< callout info >}}
 The build process will create a [Capsule](http://capsule.io) of the project. A capsule is a standalone JAR containing
 all the files and dependencies of the project. The capsule can be launched with:
 
 ```plain
 java -jar target/my-app-1.0.0-SNAPSHOT-capsule.jar
 ```    
-{{% /callout %}}
+{{< /callout >}}
 
 # First run
 

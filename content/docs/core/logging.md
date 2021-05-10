@@ -1,16 +1,12 @@
 ---
 title: "Logging"
-type: "home"
-zones:
-    - "Docs"
-sections:
-    - "Manual"    
+subsection: "core"
 tags:
     - logging
 aliases: /docs/seed/logging    
 menu:
-    docs-manual:
-        parent: "core"
+    docs-core:
+        parent: "basics"
         weight: 4
 ---
 
@@ -66,7 +62,7 @@ following settings:
 For supported SLF4J implementations (currently only Logback), you can easily change the logging system configuration
 with the following options:
  
-{{% config p="logging" %}} 
+{{< config p="logging" >}} 
 ```yaml
 logging:
   # Logging level of the root logger
@@ -84,13 +80,13 @@ logging:
       # Additivity for this specific logger
       additive: (boolean)  
 ``` 
-{{% /config %}} 
+{{< /config >}} 
 
-{{% callout info %}}
+{{< callout info >}}
 This automatic configuration is enough for most development needs. It may also be adequate for running in cloud environments
 where the standard output is typically redirected to a log collector. If you need more control, check
 out the native configuration of you implementation below.
-{{% /callout %}}
+{{< /callout >}}
  
 ### Native configuration
 

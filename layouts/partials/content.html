@@ -9,7 +9,9 @@
     {{ end }}
         <div class="content-wrapper">
             <div class="doc-content">
+                {{ if not .Params.NoTitle }}
                 <h1 class="nocount">{{ .Title | title }}</h1>
+                {{ end }}
                 {{ .Content }}
             </div>
         </div>

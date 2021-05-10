@@ -13,9 +13,9 @@ noToc: true
 
 This is the reference manual for all topics of the Java framework. 
 
-{{% callout tips %}}
+{{< callout tips >}}
 It is best to have a good understanding of the [essential notions](..) before going further into this reference manual.
-{{% /callout %}}
+{{< /callout >}}
 
 # Application lifecycle
 

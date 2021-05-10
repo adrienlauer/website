@@ -1,21 +1,17 @@
 ---
 title: "Qualified injection"
-type: "home"
-zones:
-    - "Docs"
-sections:
-    - "Business"    
+subsection: "business"
 tags:
     - essentials
     - domain-driven design
     - injection
 menu:
     docs-business:
-        parent: "architecture"
+        parent: "basics"
         weight: 7
 ---
 
-In the business framework, you always [inject]({{< ref "learn/getting-started/dependency-injection.md" >}}) dependencies by interface
+In the business framework, you always [inject]({{< ref "learn/tutorial/dependency-injection.md" >}}) dependencies by interface
 not by implementation class. For each injection point, two situations are possible:
 
 * If only one implementation exists for a specific interface, it is injected without ambiguity.
@@ -53,7 +49,7 @@ Other qualifiers can be found in [add-ons]({{< baseUrl >}}addons), particularly 
 The {{< java "javax.inject.Named" "@" >}} annotation is a qualifier that uses a String as the qualifying element. This is
 the only qualifier that is part of the JSR-330 standard.
  
-As an example, consider the following [policy]({{< ref "docs/business/policies.md" >}}%) interface:
+As an example, consider the following [policy]({{< ref "docs/business/behavior/policies.md" >}}%) interface:
 
 ```java
 @Policy
@@ -151,9 +147,9 @@ public class SomeClass {
 
 The business framework support qualified injection for the following interfaces:
 
-* [Factories]({{< ref "docs/business/factories.md" >}}),
-* [Identity generators]({{< ref "docs/business/factories.md#identity-generation" >}}),
-* [Repositories]({{< ref "docs/business/repositories.md" >}}),
-* [Services]({{< ref "docs/business/services.md" >}}),
-* [Policies]({{< ref "docs/business/policies.md" >}}),
-* [Assemblers]({{< ref "docs/business/assemblers.md" >}}).
+* [Factories]({{< ref "docs/business/behavior/factories.md" >}}),
+* [Identity generators]({{< ref "docs/business/behavior/factories.md#identity-generation" >}}),
+* [Repositories]({{< ref "docs/business/behavior/repositories.md" >}}),
+* [Services]({{< ref "docs/business/behavior/services.md" >}}),
+* [Policies]({{< ref "docs/business/behavior/policies.md" >}}),
+* [Assemblers]({{< ref "docs/business/interfaces/assemblers.md" >}}).

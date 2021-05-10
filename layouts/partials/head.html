@@ -1,5 +1,16 @@
-{{ if isset .Params.zones 0 }}
-    {{ $.Scratch.Set "zone" (index .Site.Params.zone (index .Params.zones 0 | lower) "label") }}
+{{ $sectionKey := .Section | lower }}
+{{ $.Scratch.Set "sectionKey" $sectionKey }}
+{{ if eq $sectionKey "addons" }}
+{{ $.Scratch.Set "subSectionKey" "addons" }}
+{{ else }}
+{{ if isset .Params "subsection" }}
+{{ $.Scratch.Set "subSectionKey" (print $sectionKey "-" (lower .Params.subsection)) }}
+{{ else }}
+{{ $.Scratch.Set "subSectionKey" (lower $sectionKey)}}
+{{ end}}
+{{ end }}
+{{ if isset .Params.sections 0 }}
+    {{ $.Scratch.Set "zone" (index .Site.Params.sections (index .Params.sections 0 | lower) "label") }}
 {{ end }}
 {{ if eq .Title ""}}
     {{ $.Scratch.Set "title" "SeedStack - Clean Java development" }}

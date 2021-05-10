@@ -15,9 +15,9 @@ zones:
 We are happy to announce the release of SeedStack 17.11 «Nymphaea». The highlight is a major update to the business framework 
 but it also contains two new add-ons, one being to use [Apache Kafka](https://kafka.apache.org/) in SeedStack apps.<!--more--> 
 
-{{% callout info %}}
+{{< callout info >}}
 See the [full changelog on GitHub](https://github.com/seedstack/distribution/releases/tag/v17.11).
-{{% /callout %}}
+{{< /callout >}}
 
 ## New features
 
@@ -76,9 +76,9 @@ To use this option, put the following dependency along the `business-core` depen
 The spirit of the `business-migrate` module is to offer immediate backwards compatibility with minimal effort, and allow
 you to migrate progressively to business 4.x code. Compatibility classes are marked as deprecated. 
 
-{{% callout info %}}
+{{< callout info >}}
 A upcoming guide will provide instructions on how to use the `business-migrate` module.
-{{% /callout %}}
+{{< /callout >}}
 
 #### SeedStack compatibility BOM
 

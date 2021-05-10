@@ -1,10 +1,6 @@
 ---
 title: "Bibliography"
-type: "home"
-zones:
-    - "Docs"
-sections:
-    - "Business"    
+subsection: "business"
 tags:
     - domain-driven design
 menu:

@@ -1,17 +1,13 @@
 ---
-title: "Integration testing"
-type: "home"
-zones:
-    - "Docs"
-sections:
-    - "Manual"    
+title: "Testing"
+subsection: "core"
 tags:
     - tutorial
     - testing
 menu:
-    docs-manual:
-        parent: "core"
-        weight: 2
+    docs-core:
+        parent: "basics"
+        weight: 10
 ---
 
 SeedStack provides several features and tools to do integration testing in your application.<!--more--> 
@@ -41,9 +37,9 @@ public class SomeIT {
 }
 ```
 
-{{% callout info %}}
+{{< callout info >}}
 Test class instances will be injected and can be intercepted (for instance for transaction testing).
-{{% /callout %}}
+{{< /callout >}}
 
 ## Other testing frameworks
 
@@ -139,10 +135,10 @@ public class SomeIT {
 }
 ``` 
 
-{{% callout warning %}}
+{{< callout warning >}}
 When the {{< java "org.seedstack.seed.testing.Arguments" "@" >}} annotation is used on a **test method**, the 
 [launch mode]({{< ref "#altering launch" >}}) must be set to `PER_TEST`, otherwise it is ignored.
-{{% /callout %}}
+{{< /callout >}}
 
 ### Altering kernel parameters
 	
@@ -160,10 +156,10 @@ public class SomeIT {
 }
 ``` 
 
-{{% callout warning %}}
+{{< callout warning >}}
 When the {{< java "org.seedstack.seed.testing.KernelParameter" "@" >}} annotation is used on a **test method**, the 
 [launch mode]({{< ref "#altering launch" >}}) must be set to `PER_TEST`, otherwise it is ignored.
-{{% /callout %}}
+{{< /callout >}}
 
 ### Expecting a launch exception
 
@@ -181,7 +177,7 @@ public class SomeIT {
 }
 ```     
 	
-{{% callout warning %}}
+{{< callout warning >}}
 When the {{< java "org.seedstack.seed.testing.Expected" "@" >}} annotation is used on a **test method**, the 
 [launch mode]({{< ref "#altering launch" >}}) must be set to `PER_TEST`, otherwise it is ignored.
-{{% /callout %}}	
+{{< /callout >}}	

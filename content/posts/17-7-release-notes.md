@@ -16,9 +16,9 @@ We are happy to announce the release of SeedStack 17.7 «Magnolia». This versio
 (see AWS Lambda and Consul add-ons below) and much-improved project generation including an optional ready-to-use
 Docker environment for your Web projects. <!--more--> 
 
-{{% callout info %}}
+{{< callout info >}}
 See the [full changelog on GitHub](https://github.com/seedstack/distribution/releases/tag/v17.7).
-{{% /callout %}}
+{{< /callout >}}
 
 ## New features
 

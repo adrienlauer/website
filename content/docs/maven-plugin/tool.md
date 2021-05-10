@@ -1,20 +1,29 @@
 ---
-title: "Tool execution"
-type: "home"
-zones:
-    - "Docs"
-sections:
-    - "Maven"    
+title: "Tool"
+subsection: "maven"
 tags:
     - maven
 aliases: /docs/maven-plugin/manual/tool    
 menu:
     docs-maven:
         parent: "tools"
-        weight: 50
+        weight: 99
 ---
 
-The `tool` goal will execute the application in [tool mode]({{< relref "docs/core#tool-mode" >}}) instead of its normal mode. <!--more-->
+The `tool` goal can execute any [application tool]({{< relref "docs/core#tool-mode" >}}) present in the classpath by
+its name.<!--more-->
+
+## Usage
+
+The name of the tool must be specified as the first argument. Subsequent arguments are passed to the executed tool itself.
+
+```bash
+mvn -Dargs="toolName arg1 arg2 arg3..." org.seedstack:seedstack-maven-plugin:tool
+```
+
+
+## Arguments
+
 It will execute the tool specified as the first argument in the `args` parameter. Further arguments and options depend
 upon each tool.
 
@@ -22,6 +31,7 @@ upon each tool.
 
 Parameters can be given as system properties (`-DparameterName=parameterValue`) or specified in the `pom.xml` plugin declaration:
 
+{{< html >}}
 <table class="table table-striped table-bordered table-condensed">
     <thead>
     <tr>
@@ -40,6 +50,7 @@ Parameters can be given as system properties (`-DparameterName=parameterValue`) 
     </tr>
     </tbody>
 </table>
+{{< /html >}}
 
 ## Examples
 

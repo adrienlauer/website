@@ -22,14 +22,14 @@ Add the following Maven dependency to the `pom.xml` file:
 
 The version of the dependency is managed by the SeedStack BOM. 
 
-{{% callout tips %}}
+{{< callout tips >}}
 One way of installing MongoDB locally is to use [Docker](https://www.docker.com/). Install it for your operating system,
 and then run the official [MongoDB docker image](https://hub.docker.com/_/mongo/) on your instance:
 
 ```plain
 docker run --name some-mongo -p 27017:27017 -d mongo
 ```
-{{% /callout %}}
+{{< /callout >}}
 
 We need to configure a MongoDB client in the `seed.props` file, located in `META-INF/configuration`:
 
